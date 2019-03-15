@@ -1,0 +1,15 @@
+{
+  "name": "Google Colab Reconnector",
+  "description": "Reconnect google colab automatically",
+  "version": "0.1",
+  "incognito": "split",
+  "content_scripts": [
+    {
+      "matches": ["*://*.research.google.com/*"],
+      "js": ["script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["tabs","*://*.research.google.com/*"],
+  "manifest_version": 2
+}
